@@ -1,0 +1,190 @@
+function print2(){
+var dict=  { i: 1, like: 2, sam: 3, sung: 4, samsung: 5, mobile: 6, ice: 7 ,Cream: 8, icecream: 9, man: 10, go: 11, mango: 12 };
+var inputs= "like";
+var dict2={ 
+ i: 1, 
+ like: 2, 
+ samsung: 3, 
+ mobile: 4, 
+ icecream: 7, 
+ man: 8, 
+ go: 9
+};
+console.log(dict.i);
+for(var key in dict){
+
+ if(key==inputs)
+ console.log("hiuih"); 
+}
+         
+
+    
+}
+function printa(){
+ var dict2={ 
+ i: 1, 
+ like: 2, 
+ samsung: 3, 
+ mobile: 4, 
+ cecream: 7, 
+ man: 8, 
+ go: 9
+};
+var inputs ="icecream";
+var t= inputs.length;
+console.log(t);
+var sl;
+var m;
+var x,i;
+m=0;
+var answer="";
+
+              for(i=0;i<t;i++){
+
+ 
+                      for(j=i;j<t;j++)
+                      {
+   
+                          var a= inputs.slice(i,j+1);
+                          
+        
+                                 for(var key in dict2)
+                                 {
+
+                                   if(key==a){
+                                   answer=answer+a;
+                                    console.log(answer);
+                                      m=m+dict2[key];
+ 
+                                      break;
+                                    } 
+                                 }  
+
+ if (a==key)
+       {
+         console.log("breaks");
+       
+       break;
+       }
+       
+
+      }
+        if(answer==inputs && answer.length==t )
+
+        {break;}
+      
+       }
+       
+       
+  
+     
+  
+  if(answer==inputs)
+  {
+  answer="yes";
+  console.log(m);
+  console.log(answer);
+  }
+  else
+  {
+  answer="no";
+  console.log(answer);
+  }
+  
+
+              }
+           
+
+        
+
+  
+
+
+ 
+
+
+
+
+
+
+
+
+
+function print() {
+   
+var dict=  ["i","like","sam","sung","samsung","mobile", "ice" ,"Cream", "icecream","man", "go", "mango"];
+var dict2={ 
+ i: 1, 
+ like: 2, 
+ samsung: 3, 
+ mobile: 4, 
+ icecream: 7, 
+ man: 8, 
+ go: 9
+};
+var inputs ="ilike";
+var t= inputs.length;
+var sl;
+var m;
+var x,i;
+m=0;
+var answer="";
+
+
+for(i=0; i<5;i++)
+  {
+
+     for(var j=i;j<5;j++)
+     {
+
+      var a= inputs.slice(i,j+1);
+      console.log(a);
+        for(x=0;x<11;x++)
+         {
+         
+           if(a==dict[x])
+           {
+             
+            answer=answer+a;
+            console.log(answer);
+            m=m+x;
+
+            break;
+           } 
+         }
+       if (a==dict[x])
+       {
+         console.log("breaks");
+       
+       break;
+       }
+       
+
+      }
+        if(answer==inputs){break;}
+      
+       }
+       
+       
+  
+     
+  
+  if(answer==inputs)
+  {
+  answer="yes";
+  console.log(m);
+  console.log(answer);
+  }
+  else
+  {
+  answer="no";
+  console.log(answer);
+  }
+  
+
+
+
+}
+
+
+printa()
