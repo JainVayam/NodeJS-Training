@@ -1,0 +1,19 @@
+function check (character){
+  var input = "asdwqdaabbwwddssafhjkls";
+  var frequency = {}; 
+  var x = 0; 
+  var s = undefined ;
+    
+  for (var x = 0; x < 23 ; x++) {     
+    var c = input[x];     
+    if (frequency[c] == undefined) {
+      frequency[c] = 1;
+    } else {
+        frequency[c] = frequency[c]+1;
+    }
+  }
+  for (var key in frequency) {
+    console.log (key + " : " + frequency[key]);
+  }
+}
+check ("asdwgdfaadwasfge") 
