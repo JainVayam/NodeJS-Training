@@ -1,9 +1,9 @@
 function secondhighest(s) {
-  var largest,secondlarge,i,d;
-  arraysize = s.length;
+  var largest,secondlarge;
+  var arraysize = s.length;
   largest = s[0];
   secondlarge = 0;
-  for (index = 0; index < arraysize; index++) {
+  for (var index = 0; index < arraysize; index++) {
     if (s[index] > largest) {
       secondlarge = largest;
       largest = s[index];

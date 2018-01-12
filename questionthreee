@@ -10,23 +10,22 @@ function printchecker() {
 	};
 	var inputs = "icecream";
 	var t = inputs.length;
-	var count;
-	var total = 0;
+	var count = 0;
 	var answer = "" ;
 	for (var inputindex = 0; inputindex < t; inputindex++) {
-		for (secondindex = inputindex; secondindex < t; secondindex++) {
-			var selection = inputs.slice ( inputindex, secondindex+1 );
-			for( var key in dict2 ) {
-					if ( key == selection) {
-					answer = answer+selection;
-					console.log(answer);
-					count = count + dict2[key];
-					break;
+		for (var secondindex = inputindex; secondindex < t; secondindex++) {
+			var selection = inputs.slice(inputindex, secondindex + 1);
+			for(var key in dict2) {
+					if (key == selection) {
+						answer = answer + selection;
+						console.log(answer);
+						count = count + dict2[key];
+						break;
 					} 
 			}
 				if (selection == key) {
-				console.log("breaks"); 
-				break;
+					console.log("breaks"); 
+					break;
 				}
 		}
 		if (answer == inputs && answer.length == t ) {
@@ -41,7 +40,5 @@ function printchecker() {
 			answer = "no";
 			console.log(answer);
 		}
-	
-
 } 
-	printchecker()
+printchecker();
