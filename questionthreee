@@ -1,0 +1,44 @@
+function printChecker() {
+  var dictionary = { 
+    i: 1, 
+    like: 2, 
+    samsung: 3, 
+    mobile: 4, 
+    cecream: 7, 
+    man: 8, 
+    go: 9
+  };
+  var inputs = "icecream";
+  var t = inputs.length;
+  var count = 0;
+  var answer = "" ;
+  for (var inputIndex = 0; inputIndex < t; inputIndex++) {
+    for (var secondIndex = inputIndex; secondIndex < t; secondIndex++) {
+      var selection = inputs.slice(inputIndex, secondIndex + 1);
+      for (var key in dictionary) {
+        if (key == selection) {
+          answer = answer + selection;
+          console.log(answer);
+          count = count + dictionary[key];
+          break;
+        } 
+      }
+      if (selection == key) {
+        console.log("breaks"); 
+        break;
+      }
+    }
+    if (answer == inputs && answer.length == t) {
+      break;
+    }
+  } 
+  if (answer == inputs) {
+    answer = "yes";
+    console.log(count);
+    console.log(answer);
+  } else {
+    answer = "no";
+    console.log(answer);
+    }
+} 
+printChecker();
