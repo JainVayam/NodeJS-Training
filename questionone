@@ -1,14 +1,14 @@
-function secondHighest(s) {
+function secondHighest(inptArray) {
   var largest,secondLarge=0;
   var arraySize = s.length;
-  largest = s[0];
+  largest = inptArray[0];
   for (var index = 0; index < arraySize; index++) {
-    if (s[index] > largest) {
+    if (inptArray[index] > largest) {
       secondLarge = largest;
-      largest = s[index];
+      largest = inptArray[index];
     }
   }
   return secondLarge;
 }
-var points = [40, 100, 1, 5, 25, 10]; 
-console.log(secondHighest(points));
+var input = [40, 100, 1, 5, 25, 10]; 
+console.log(secondHighest(input));

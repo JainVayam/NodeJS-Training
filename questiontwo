@@ -1,4 +1,4 @@
-function frequencyCounter (character){
+function frequencyCounter (character) {
   var input = "asdwqdaabbwwddssafhjkls";
   var frequency = {}; 
   for (var index = 0; index < 23; index++) {
@@ -7,7 +7,7 @@ function frequencyCounter (character){
       frequency[char] = 1;
     } else {
       frequency[char] = frequency[char] + 1;
-    }
+      }
   }
   for (var key in frequency) {
     console.log(key + " : " + frequency[key]);
