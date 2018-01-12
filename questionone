@@ -1,6 +1,6 @@
 function secondHighest(inptArray) {
-  var largest,secondLarge=0;
-  var arraySize = s.length;
+  var largest, secondLarge = 0;
+  var arraySize = inptArray.length;
   largest = inptArray[0];
   for (var index = 0; index < arraySize; index++) {
     if (inptArray[index] > largest) {
