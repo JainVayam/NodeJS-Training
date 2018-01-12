@@ -1,5 +1,5 @@
-function printchecker() {
- 	var dict2 = { 
+function printChecker() {
+ 	var dictionary = { 
 		i: 1, 
 		like: 2, 
 		samsung: 3, 
@@ -12,23 +12,23 @@ function printchecker() {
 	var t = inputs.length;
 	var count = 0;
 	var answer = "" ;
-	for (var inputindex = 0; inputindex < t; inputindex++) {
-		for (var secondindex = inputindex; secondindex < t; secondindex++) {
-			var selection = inputs.slice(inputindex, secondindex + 1);
-			for(var key in dict2) {
+	for (var inputIndex = 0; inputIndex < t; inputIndex++) {
+		for (var secondIndex = inputIndex; secondIndex < t; secondIndex++) {
+			var selection = inputs.slice(inputIndex, secondIndex + 1);
+			for(var key in dictionary) {
 					if (key == selection) {
 						answer = answer + selection;
 						console.log(answer);
-						count = count + dict2[key];
+						count = count + dictionary[key];
 						break;
 					} 
 			}
-				if (selection == key) {
-					console.log("breaks"); 
-					break;
-				}
+			if (selection == key) {
+				console.log("breaks"); 
+				break;
+			}
 		}
-		if (answer == inputs && answer.length == t ) {
+	  if (answer == inputs && answer.length == t ) {
 			break;
 		}
 	} 
@@ -37,8 +37,8 @@ function printchecker() {
 		console.log(count);
 		console.log(answer);
 	} else {
-			answer = "no";
-			console.log(answer);
+		answer = "no";
+		console.log(answer);
 		}
 } 
-printchecker();
+printChecker();
