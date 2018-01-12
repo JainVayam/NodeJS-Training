@@ -1,0 +1,15 @@
+function secondhighest(s) {
+  var largest,secondlarge;
+  var arraysize = s.length;
+  largest = s[0];
+  secondlarge = 0;
+  for (var index = 0; index < arraysize; index++) {
+    if (s[index] > largest) {
+      secondlarge = largest;
+      largest = s[index];
+    }
+  }
+  return secondlarge;
+}
+var points = [40, 100, 1, 5, 25, 10]; 
+console.log(secondhighest(points));
