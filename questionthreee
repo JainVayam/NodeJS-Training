@@ -5,10 +5,10 @@ function printChecker() {
     samsung: 3, 
     mobile: 4, 
     cecream: 7, 
-    man: 8, 
+    mans: 8, 
     go: 9
   };
-  var inputs = "icecream";
+  var inputs = "cecream";
   var count = 0;
   var answer = "" ;
   for (var inputIndex = 0; inputIndex < inputs.length; inputIndex++) {
@@ -17,13 +17,11 @@ function printChecker() {
       for (var key in dictionary) {
         if (key == selection) {
           answer = answer + selection;
-          console.log(answer);
           count = count + dictionary[key];
           break;
         } 
       }
       if (selection == key) {
-        console.log("breaks"); 
         break;
       }
     }
