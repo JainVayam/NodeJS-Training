@@ -3,8 +3,8 @@ Array.prototype.vayamIterate = function(callBack) {
     callBack(this[index]);
   }
 }           
-function sampleFunction(x) {
-  console.log(x);
+function sampleFunction(arrayElement) {
+  console.log(arrayElement);
 }
 var sampleArray = [1, 2, 3, 4, 5];
 sampleArray.vayamIterate(sampleFunction);
