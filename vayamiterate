@@ -1,0 +1,10 @@
+Array.prototype.vayamIterate = function(callBack) {
+  for(var index = 0; index < this.length; index++) {
+    callBack(this[index]);
+  }
+}           
+function sampleFunction(x) {
+  console.log(x);
+}
+var sampleArray = [1, 2, 3, 4, 5];
+sampleArray.vayamIterate(sampleFunction);
