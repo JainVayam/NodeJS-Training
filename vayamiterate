@@ -2,7 +2,8 @@ Array.prototype.vayamIterate = function(callBack) {
   for (var index = 0; index < this.length; index++) {
     callBack(this[index]);
   }
-}           
+}
+           
 function sampleFunction(arrayElement) {
   console.log(arrayElement);
 }
