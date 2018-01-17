@@ -1,5 +1,4 @@
 exports.frequencyCounter = function (input) {
-  //var input = "asdwqdaabbwwddssafhjkls";
   var frequency = {}; 
   for (var index = 0; index < input.length; index++) {
     var char = input[index];     

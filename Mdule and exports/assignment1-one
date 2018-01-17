@@ -10,5 +10,4 @@ module.exports.secondHighest = function (inptArray) {
   return secondLargest;
 }
 
-//var input = [40, 100, 1, 5, 25, 10]; 
-//console.log(secondHighest(input));
+
