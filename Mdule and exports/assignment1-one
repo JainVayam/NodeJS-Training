@@ -1,0 +1,13 @@
+module.exports.secondHighest = function (inptArray) {
+  var largest, secondLargest = 0;
+  largest = inptArray[0];
+  for (var index = 0; index < inptArray.length; index++) {
+    if (inptArray[index] > largest) {
+      secondLargest = largest;
+      largest = inptArray[index];
+    }
+  }
+  return secondLargest;
+}
+
+
