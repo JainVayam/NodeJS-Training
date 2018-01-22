@@ -1,5 +1,5 @@
-module.exports.insertUser = function(app, user) {
-  app.post('/insertUser', function(req, res) {
+module.exports.insertUser = (app, user) => {
+  app.post('/insertUser', (req, res) => {
     var isUserAlreadyPresent;
     var receivedID = req.body.id
     var isUserAlreadyPresent = user.findIndex((user,index)=> { 
