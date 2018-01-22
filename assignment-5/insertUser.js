@@ -1,19 +1,14 @@
 module.exports.insertUser = (app, user) => {
   app.post('/insertUser', (req, res) => {
-    var isUserAlreadyPresent;
-    var receivedID = req.body.id
-    var isUserAlreadyPresent = user.findIndex((user,index)=> { 
-      return user.id == receivedID
-    });
-    if (isUserAlreadyPresent == -1) {
+    var searchID = require('./findingID');
+    var receivedID = req.body.id;
+    var userID = searchID.findingID(user, receivedID);
+    if (userID == -1) {
       newUser = req.body;
       user.push(req.body);
-      var statusCode = 200;
-      var message = "Succesfully Added";
-    } else {
-      var statusCode = 400;
-      var message = "Failed : ID already present";
-    } 
+    }
+    var statusCode = userID == -1 ? 200 :400;
+    var message = userID == -1 ? "Insertion done" :"Failed: ID Present";  
     res.status(statusCode).send(message);
   })
 }
