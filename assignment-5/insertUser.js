@@ -7,8 +7,8 @@ module.exports.insertUser = (app, user) => {
       newUser = req.body;
       user.push(req.body);
     }
-    var statusCode = userID == -1 ? 200 :400;
-    var message = userID == -1 ? "Insertion done" :"Failed: ID Present";  
+    var statusCode = userID == -1 ? 200 : 400;
+    var message = userID == -1 ? "Insertion done" : "Failed: ID Present";  
     res.status(statusCode).send(message);
   })
 }
