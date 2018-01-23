@@ -1,8 +1,8 @@
 module.exports.updateUser = (app, user) => {
   app.put('/updateUser', (req, res) => {
-    var searchID = require('./findingID');
+    var searchID = require('./helperMethod');
     var receivedID = req.body.id;
-    var userID = searchID.findingID(user, receivedID);
+    var userID = searchID.helperMethod(user, receivedID);
     if (userID != -1) {
       user[userID] = req.body;
     }

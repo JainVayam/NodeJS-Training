@@ -1,10 +1,9 @@
 module.exports.insertUser = (app, user) => {
   app.post('/insertUser', (req, res) => {
-    var searchID = require('./findingID');
+    var searchID = require('./helperMethod');
     var receivedID = req.body.id;
-    var userID = searchID.findingID(user, receivedID);
+    var userID = searchID.helperMethod(user, receivedID);
     if (userID == -1) {
-      newUser = req.body;
       user.push(req.body);
     }
     var statusCode = userID == -1 ? 200 : 400;
