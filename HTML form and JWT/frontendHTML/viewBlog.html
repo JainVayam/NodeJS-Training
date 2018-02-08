@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'>
+    </script>
+  </head>
+  <body>
+    <div id="divHeader"> 
+      <h2>Posts</h2>
+    </div>
+    <div id="content"></div>
+  </body>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: "http://localhost:3000/blogData",
+        data : {"token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVhNzk5YzY4MGFmY2Y2MjkzOWY1YjQ4OCIsImlhdCI6MTUxODAwMDkwNH0.Q9otlQIlGw155nuUCDhBrjPdpu212-1h0Bvk5ohPplk"},
+        type : "POST",
+        success : function (res) {  
+          $('#content').html("<table><thead><tr><th>Username</th><th>Post</th><.tr></table>")
+          $.each(res, function (index, element) {    
+            $('table').append('<tr><td>' + element.postedBy+ '</td><td>' + element.blogContent+ '<td>' )
+          }) 
+        }        
+      })
+    })
+  </script>
+</html>
